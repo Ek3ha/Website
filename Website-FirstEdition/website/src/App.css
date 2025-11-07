@@ -1,0 +1,111 @@
+:root {
+  --bg-color: #f7c873;     /* Warm sunshine yellow */
+  --accent-color: #99d9f5;    /* Sky blue */
+  --text-color: #00205b;      /* Deep navy */
+  --muted-text: #4a5568;      /* Secondary text */
+  --highlight-bg: #eaf8ff;    /* Light blue highlight */
+  --shape-bg: #ffffff;        /* Abstract shape background */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh; /* full viewport height */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color); /* light sunshine background */
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+/* Content container: text left, image right */
+.content {
+  display: flex;
+  width: 75%;
+  height: 75%;
+}
+
+
+/* ---------------- TEXT SECTION ---------------- */
+.text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.text-section h1 {
+  font-size: 2.2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.text-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+
+.about-me p {
+  font-size: 3rem;
+  line-height: 1.7;
+  color: var(--muted-text);
+  max-width: 80%;
+}
+/* ---------------- IMAGE SECTION ---------------- */
+.image-section {
+  flex: 1;
+  background-color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Profile image styling */
+.profile-image {
+  width: 80%;
+  max-width: 550px;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .text-section {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .about-me p {
+    max-width: 100%;
+  }
+
+  .image-section {
+    height: 50vh;
+  }
+
+  .profile-image {
+    width: 50%;
+  }
+}

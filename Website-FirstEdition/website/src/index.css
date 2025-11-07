@@ -1,0 +1,24 @@
+:root {
+  --bg-color: #f18383;            /* Sunshine yellow base */
+  --accent-color: #6EC1E4;    /* Sky blue accent */
+  --text-color: #1B263B;      /* Deep navy text */
+  --muted-text: #4A5568;      /* Secondary gray text */
+  --button-bg: #FFD166;       /* Warm yellow for CTAs */
+  --button-text: #1B263B;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   background-color: var(--bg-color);
+   color: var(--text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
